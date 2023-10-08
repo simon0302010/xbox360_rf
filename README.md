@@ -19,6 +19,6 @@ GND     -> GND
 
 ## Usage
 
-init_mod.py starts the Xbox 360 boot sequence. 
-sync.py starts syncing. 
-example.py starts boot sequence and plays a small LED animation
+- init_mod.py starts the Xbox 360 boot sequence
+- sync.py starts syncing
+- example.py starts boot sequence and plays a small LED animation
