@@ -14,3 +14,4 @@ print("start syncing..")
 xbox_rf.Init()
 xbox_rf.SendCommand("ctl_sync",200)
 print("done, please press the sync button on your controller")
+
