@@ -39,7 +39,7 @@ cmdlist["ctl_shutdown"]  = "0000001001"
 
 # Reverse cmdlist. Needed by Bruteforce to resolv 
 # binary commands to their names.
-cmdlist_reversed = dict([(v,k) for k,v in cmdlist.items()])
+cmdlist_reversed = dict([(v,k) for k,v in list(cmdlist.items())])
 
 
 # SendData
@@ -112,10 +112,11 @@ def Bruteforce(begin=0, end=255, ignore_known=True):
   while begin <= end:
 	binstr = "00" + "{0:b}".format(begin)
 	binstr = "0" * (7-(len(binstr)-3)) + binstr
-	if binstr not in cmdlist.values() or ignore_known == False:
+	if binstr not in list(cmdlist.values()) or ignore_known == False:
 		SendData(binstr)
-		print(binstr + " : " + str(begin))
+		print((binstr + " : " + str(begin)))
 	else:
-		print(binstr + " : " + cmdlist_reversed[binstr])
+		print((binstr + " : " + cmdlist_reversed[binstr]))
 	wiringpi2.delay(1000)
 	begin += 1
+
