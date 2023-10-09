@@ -7,7 +7,7 @@
 # 
 # www.astrorats.org | @_tin0_
 
-import wiringpi2
+import wiringpi as wiringpi2
 
 data_pin  = 5 # data line (pin 6 on the module)
 clock_pin = 6 # clock line (pin 7 on module)
